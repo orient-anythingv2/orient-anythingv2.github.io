@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.2">
+    <meta charset="utf-8">
+    <meta name="description" content="Orient Anything">
+    <meta name="keywords" content="Monocular Orientation Estimation">
+    <title>Orient Anything</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/Logo.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script src="./static/js/script.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu">
+    </nav>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">
+                            [NeurIPS 2025 Spotlight]<br>
+                            Orient Anything V2: Unifying Orientation and Rotation Understanding
+                        </h1>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=euXK0lkAAAAJ">Zehan
+                                    Wang</a><sup>1*</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?hl=zh-CN&user=DptGMnYAAAAJ">Ziang
+                                    Zhang</a><sup>1*</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?hl=en&user=OIuFz1gAAAAJ">Jialei
+                                    Wang</a><sup>1</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="https://github.com/1339354001">Jiayang Xu</a><sup>1</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?hl=zh-CN&user=wYDbtFsAAAAJ">Tianyu
+                                    Pang</a><sup>2</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?hl=zh-CN&user=QOp7xW0AAAAJ">Du
+                                    Chao</a><sup>2</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=4uE10I0AAAAJ&hl&oi=ao">Hengshuang
+                                    Zhao</a><sup>3</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=IIoFY90AAAAJ&hl&oi=ao">Zhou
+                                    Zhao</a><sup>1</sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>Zhejiang University</span>&emsp;&emsp;&emsp;&emsp;
+                            <span class="author-block"><sup>2</sup>SEA AI Lab</span>&emsp;&emsp;&emsp;&emsp;
+                            <span class="author-block"><sup>3</sup>HKU</span>
+                        </div>
+
+                        <p class="is-size-6"><em>*Equal Contribution</em></p>
+
+                        <div class="publication-links" style="margin-top: 1rem;">
+                            <a href="https://arxiv.org/abs/2412.18605" target="_blank"
+                                class="button is-normal is-rounded"
+                                style="background-color: #ff4d4d; color: white; margin: 0.25rem;">
+                                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                <span>arXiv PDF</span>
+                            </a>
+                            <a href="https://orient-anythingv2.github.io" target="_blank"
+                                class="button is-normal is-rounded"
+                                style="background-color: #4ade80; color: black; margin: 0.25rem;">
+                                <span class="icon"><i class="fas fa-home"></i></span>
+                                <span>Project Page</span>
+                            </a>
+                            <a href="https://huggingface.co/spaces/Viglong/Orient-Anything-V2" target="_blank"
+                                class="button is-normal is-rounded"
+                                style="background-color: #4361ee; color: white; margin: 0.25rem;">
+                                <span class="icon"><i class="fas fa-laptop"></i></span>
+                                <span>Hugging Face Demo</span>
+                            </a>
+                            <a href="https://huggingface.co/datasets/Viglong/OriAnyV2_Train_Render" target="_blank"
+                                class="button is-normal is-rounded"
+                                style="background-color: #f77f00; color: white; margin: 0.25rem;">
+                                <span class="icon"><i class="fas fa-database"></i></span>
+                                <span>Train Data</span>
+                            </a>
+                            <a href="https://huggingface.co/datasets/Viglong/OriAnyV2_Inference" target="_blank"
+                                class="button is-normal is-rounded"
+                                style="background-color: #f77f00; color: white; margin: 0.25rem;">
+                                <span class="icon"><i class="fas fa-database"></i></span>
+                                <span>Test Data</span>
+                            </a>
+                            <a href="https://huggingface.co/papers/2412.18605" target="_blank"
+                                class="button is-normal is-rounded"
+                                style="background-color: #ffba08; color: black; margin: 0.25rem;">
+                                <span class="icon"><i class="fas fa-book"></i></span>
+                                <span>Hugging Face Paper</span>
+                            </a>
+                        </div>
+
+                        <p class="is-size-5" style="margin-top: 1.5rem;">
+                            <strong>Orient Anything V2</strong>, a unified spatial vision model for understanding
+                            orientation, symmetry, and relative rotation, achieves SOTA performance across 14 datasets.
+                        </p>
+
+                        <img src="assets/overview.jpg" alt="teaser"
+                            style="width: 100%; max-width: 800px; margin-top: 1.5rem; border-radius: 8px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <b>Note:</b> To avoid ambiguity, Orient Anything only accept images containing a single object as input. For
+            multi-object scenarios, we first use SAM to isolate each object and then predict their orientation
+            separately.
+            <div class="hero-body">
+                <img id="demo" width="100%" src="static/images/demo.png" />
+            </div>
+        </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <h4 class="subtitle has-text-centered">
+                    <div class="content has-text-justified">
+                        <p>
+                            <b>Orient Anything</b>, a robust image-based object orientation estimation model. By
+                            training on 2M rendered labeled images,
+                            it achieves strong zero-shot generalization ability for images in the wild. For
+                            visualization, the object orientation is represented by the red axis,
+                            while the blue and green axes indicate the upward and left sides of the object.
+                        <p>
+
+                        </p>
+                    </div>
+                </h4>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="hero is-small" style="margin-top: 30px; padding-top: 0px;">
+        <h2 class="title is-4" style="text-align: center;">Visualizations on Images in the wild.</h2>
+        <div class="container is-max-desktop">
+            <div style="text-align: center; border: green solid 0px;">
+                <img alt="" id="wild1" width="70%" src="static/images/wild1.png"
+                    style="display: inline-block; vertical-align: middle;" />
+                <img alt="" id="wild2" width="70%" src="static/images/wild2.png" style="margin: 0 auto" />
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="margin-top: 0; padding-top: 50px;">
+        <h2 class="title is-4" style="text-align: center;">Visualization on Videos and 3D Objects</h2>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-full-width">
+                    <br>
+                    <div class="video-grid">
+                        <video poster="" id="sakura" autoplay muted loop playsinline>
+                            <source src="./videos/sakura_clip.mov" type="video/mp4">
+                        </video>
+                        <video poster="" id="jojo" autoplay muted loop playsinline>
+                            <source src="./videos/jojo_clip.mov" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-grid">
+                        <video poster="" id="ade" autoplay muted loop playsinline>
+                            <source src="./videos/model_car.mov" type="video/mp4">
+                        </video>
+                        <video poster="" id="chara" autoplay muted loop playsinline>
+                            <source src="./videos/model_chara.mov" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-grid-3">
+            <video poster="" id="pig" autoplay muted loop playsinline>
+                <source src="./videos/pig_overlay_clip.mp4" type="video/mp4">
+            </video>
+            <video poster="" id="plane" autoplay muted loop playsinline>
+                <source src="./videos/plane1_clip.mov" type="video/mp4">
+            </video>
+            <video poster="" id="car" autoplay muted loop playsinline>
+                <source src="./videos/car_clip.mov" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+
+    <section class="hero is-small" style="margin-top: 50px; padding-top: 0px;">
+        <h2 class="title is-4" style="text-align: center;">Qualitative Comparison</h2>
+        <div class="hero-body">
+            <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div style="text-align: center; border: green solid 0px;">
+                        <img src="./static/images/objectron.png" width="80%">
+                    </div>
+                    <div style="text-align: center; border: green solid 0px;">
+                        <img src="./static/images/ark.png" width="80%">
+                    </div>
+                    <div style="text-align: center; border: green solid 0px;">
+                        <img src="./static/images/sunrgbd.png" width="80%">
+                    </div>
+                    <div style="text-align: center; border: green solid 0px;">
+                        <img src="./static/images/kitti.png" width="80%">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="hero is-small" style="margin-top: 50px; padding-top: 0px;">
+        <h2 class="title is-4" style="text-align: center;">Orientation Understanding in MLLM</h2>
+        <div class="hero-body">
+
+            <div class="container" style="margin-top: 5px; padding-top: 0px;">
+                <h1 class="caption"><b>Object Direction Recognition</b></h1>
+                <div id="Direction" class="carousel results-carousel">
+                    <div style="text-align: center; border: green solid 0px;">
+                        <img src="./static/images/2.png" width="80%">
+                    </div>
+                    <div style="text-align: center; border: green solid 0px;">
+                        <img src="./static/images/3.png" width="80%">
+                    </div>
+                    <div style="text-align: center; border: green solid 0px;">
+                        <img src="./static/images/1.png" width="80%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top: 5px; padding-top: 0px;">
+                <h1 class="caption"><b>Spatial Part Reasoning</b></h1>
+                <div id="Part" class="carousel results-carousel">
+                    <div style="text-align: center; border: green solid 0px;">
+                        <img src="./static/images/4.png" width="80%">
+                    </div>
+                    <div style="text-align: center; border: green solid 0px;">
+                        <img src="./static/images/6.png" width="80%">
+                    </div>
+                    <div style="text-align: center; border: green solid 0px;">
+                        <img src="./static/images/5.png" width="80%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top: 5px; padding-top: 0px;">
+                <h1 class="caption"><b>Spatial Relation Reasoning</b></h1>
+                <div id="Relation" class="carousel results-carousel">
+                    <div style="text-align: center; border: green solid 0px;">
+                        <img src="./static/images/8.png" width="80%">
+                    </div>
+                    <div style="text-align: center; border: green solid 0px;">
+                        <img src="./static/images/9.png" width="80%">
+                    </div>
+                    <div style="text-align: center; border: green solid 0px;">
+                        <img src="./static/images/7.png" width="80%">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- <section class="section" style="background-color:#efeff081"> -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-4">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Orientation is a key attribute of objects, crucial for understanding their spatial pose and
+                            arrangement in images. However, practical solutions for accurate orientation estimation from
+                            a single image remain underexplored. In this work, we introduce Orient Anything, the first
+                            expert and foundational model designed to estimate object orientation in a single- and
+                            free-view image. Due to the scarcity of labeled data, we propose extracting knowledge from
+                            the 3D world. By developing a pipeline to annotate the front face of 3D objects and render
+                            images from random views, we collect 2M images with precise orientation annotations. To
+                            fully leverage the dataset, we design a robust training objective that models the 3D
+                            orientation as probability distributions of three angles and predicts the object orientation
+                            by fitting these distributions. Besides, we employ several strategies to improve
+                            synthetic-to-real transfer. Our model achieves state-of-the-art orientation estimation
+                            accuracy in both rendered and real images and exhibits impressive zero-shot ability in
+                            various scenarios. More importantly, our model enhances many applications, such as
+                            comprehension and generation of complex spatial concepts and 3D object pose adjustment. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-4" style="text-align: center;">Data Collection</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            The orientation data collection pipeline is composed of three steps: 1) Canonical 3D Model
+                            Filtering: This step removes any 3D objects in tilted poses. 2) Orientation Annotating: An
+                            advanced 2D VLM is used to identify the front face from multiple orthogonal perspectives,
+                            with view symmetry employed to narrow the potential choices. 3) Free-view Rendering:
+                            Rendering images from random and free viewpoints, and the object orientation is represented
+                            by the polar, azimuthal and rotation angle of the camera.
+                        </p>
+                    </div>
+                    <div class="image-area">
+                        <img src="static/images/annotation.png" alt="pipeline" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="columns is-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-4" style="text-align: center;">Model Training</h2>
+                        <div class="content has-text-justified">
+                            <p>
+                                Orient Anything consists of a simple visual encoder and multiple prediction heads. It is
+                                trained to judge
+                                if the object in the input image has a meaningful front face and fits the probability
+                                distribution of 3D orientation.
+                            </p>
+                        </div>
+
+                        <div class="image-area">
+                            <img src="static/images/model.png" alt="pipeline" width="100%" class="center">
+                        </div>
+    </section>
+
+
+    <section class="section pt-0" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title is-4">Citation</h2>
+            <pre class="selectable"><code>@article{orient_anything,
+  title={Orient Anything: Learning Robust Object Orientation Estimation from Rendering 3D Models},
+  author={Wang, Zehan and Zhang, Ziang and Pang, Tianyu and Du, Chao and Zhao, Hengshuang and Zhao, Zhou},
+  journal={arXiv:2412.18605},
+  year={2024}
+}</code></pre>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <a class="icon-link" href="">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+                <a class="icon-link" href="https://github.com/DepthAnything/Depth-Anything-V2" class="external-link"
+                    disabled>
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="columns is-centered">
+                <div class="content">
+                    <p>
+                        The template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
