@@ -144,14 +144,6 @@
                                 <span>Hugging Face Paper</span>
                             </a>
                         </div>
-
-                        <p class="is-size-5" style="margin-top: 1.5rem;">
-                            <strong>Orient Anything V2</strong>, a unified spatial vision model for understanding
-                            orientation, symmetry, and relative rotation, achieves SOTA performance across 14 datasets.
-                        </p>
-
-                        <img src="assets/overview.jpg" alt="teaser"
-                            style="width: 100%; max-width: 800px; margin-top: 1.5rem; border-radius: 8px;">
                     </div>
                 </div>
             </div>
@@ -160,11 +152,11 @@
 
     <section class="hero teaser">
         <div class="container is-max-desktop">
-            <b>Note:</b> To avoid ambiguity, Orient Anything only accept images containing a single object as input. For
+            <b>Note:</b> To avoid ambiguity, Orient Anything V2 only accept images containing a single object as input. For
             multi-object scenarios, we first use SAM to isolate each object and then predict their orientation
             separately.
             <div class="hero-body">
-                <img id="demo" width="100%" src="static/images/demo.png" />
+                <img id="demo" width="100%" src="static/figure/overview.jpg" />
             </div>
         </div>
     </section>
@@ -175,17 +167,13 @@
                 <h4 class="subtitle has-text-centered">
                     <div class="content has-text-justified">
                         <p>
-                            <b>Orient Anything</b>, a robust image-based object orientation estimation model. By
-                            training on 2M rendered labeled images,
-                            it achieves strong zero-shot generalization ability for images in the wild. For
+                            <strong>Orient Anything V2</strong>, a unified spatial vision model for understanding
+                            orientation, symmetry, and relative rotation, achieves SOTA performance across 14 datasets. For
                             visualization, the object orientation is represented by the red axis,
                             while the blue and green axes indicate the upward and left sides of the object.
-                        <p>
-
                         </p>
                     </div>
                 </h4>
-
             </div>
         </div>
     </section>
@@ -202,7 +190,7 @@
     </section>
 
     <section class="section" style="margin-top: 0; padding-top: 50px;">
-        <h2 class="title is-4" style="text-align: center;">Visualization on Videos and 3D Objects</h2>
+        <h2 class="title is-4" style="text-align: center;">Visualization on Symmetry Objects.</h2>
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column is-full-width">
@@ -264,58 +252,6 @@
     </section>
 
 
-    <section class="hero is-small" style="margin-top: 50px; padding-top: 0px;">
-        <h2 class="title is-4" style="text-align: center;">Orientation Understanding in MLLM</h2>
-        <div class="hero-body">
-
-            <div class="container" style="margin-top: 5px; padding-top: 0px;">
-                <h1 class="caption"><b>Object Direction Recognition</b></h1>
-                <div id="Direction" class="carousel results-carousel">
-                    <div style="text-align: center; border: green solid 0px;">
-                        <img src="./static/images/2.png" width="80%">
-                    </div>
-                    <div style="text-align: center; border: green solid 0px;">
-                        <img src="./static/images/3.png" width="80%">
-                    </div>
-                    <div style="text-align: center; border: green solid 0px;">
-                        <img src="./static/images/1.png" width="80%">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container" style="margin-top: 5px; padding-top: 0px;">
-                <h1 class="caption"><b>Spatial Part Reasoning</b></h1>
-                <div id="Part" class="carousel results-carousel">
-                    <div style="text-align: center; border: green solid 0px;">
-                        <img src="./static/images/4.png" width="80%">
-                    </div>
-                    <div style="text-align: center; border: green solid 0px;">
-                        <img src="./static/images/6.png" width="80%">
-                    </div>
-                    <div style="text-align: center; border: green solid 0px;">
-                        <img src="./static/images/5.png" width="80%">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container" style="margin-top: 5px; padding-top: 0px;">
-                <h1 class="caption"><b>Spatial Relation Reasoning</b></h1>
-                <div id="Relation" class="carousel results-carousel">
-                    <div style="text-align: center; border: green solid 0px;">
-                        <img src="./static/images/8.png" width="80%">
-                    </div>
-                    <div style="text-align: center; border: green solid 0px;">
-                        <img src="./static/images/9.png" width="80%">
-                    </div>
-                    <div style="text-align: center; border: green solid 0px;">
-                        <img src="./static/images/7.png" width="80%">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
     <!-- <section class="section" style="background-color:#efeff081"> -->
     <section class="section">
         <div class="container is-max-desktop">
@@ -325,20 +261,19 @@
                     <h2 class="title is-4">Abstract</h2>
                     <div class="content has-text-justified">
                         <p>
-                            Orientation is a key attribute of objects, crucial for understanding their spatial pose and
-                            arrangement in images. However, practical solutions for accurate orientation estimation from
-                            a single image remain underexplored. In this work, we introduce Orient Anything, the first
-                            expert and foundational model designed to estimate object orientation in a single- and
-                            free-view image. Due to the scarcity of labeled data, we propose extracting knowledge from
-                            the 3D world. By developing a pipeline to annotate the front face of 3D objects and render
-                            images from random views, we collect 2M images with precise orientation annotations. To
-                            fully leverage the dataset, we design a robust training objective that models the 3D
-                            orientation as probability distributions of three angles and predicts the object orientation
-                            by fitting these distributions. Besides, we employ several strategies to improve
-                            synthetic-to-real transfer. Our model achieves state-of-the-art orientation estimation
-                            accuracy in both rendered and real images and exhibits impressive zero-shot ability in
-                            various scenarios. More importantly, our model enhances many applications, such as
-                            comprehension and generation of complex spatial concepts and 3D object pose adjustment. </p>
+                            This work presents <strong>Orient Anything V2</strong>, an enhanced foundation model for unified understanding of 
+                            <span style="color: #cc6511;">object 3D orientation and rotation</span> from 
+                            <span style="color: #2271cc;">single or paired images</span>. 
+                            Building upon Orient Anything V1, which defines orientation via a single unique front face, V2 extends this capability to handle objects with diverse rotational symmetries and directly estimate relative rotations. 
+                            These improvements are enabled by four key innovations: 
+                            <strong>1)</strong> Scalable 3D assets synthesized by generative models, ensuring broad category coverage and balanced data distribution; 
+                            <strong>2)</strong> An efficient, model-in-the-loop annotation system that robustly identifies \(0\) to \(N\) valid front faces for each object; 
+                            <strong>3)</strong> A symmetry-aware, periodic distribution fitting objective that captures all plausible front-facing orientations, effectively modeling object rotational symmetry; 
+                            <strong>4)</strong> A multi-frame architecture that directly predicts relative object rotations. 
+                            Extensive experiments show that Orient Anything V2 achieves state-of-the-art zero-shot performance on 
+                            <em>orientation estimation</em>, <em>6DoF pose estimation</em>, and <em>object symmetry recognition</em> across 11 widely used benchmarks. 
+                            The model demonstrates strong generalization, significantly broadening the applicability of orientation estimation in diverse downstream tasks.
+                        </p>
                     </div>
                 </div>
             </div>
