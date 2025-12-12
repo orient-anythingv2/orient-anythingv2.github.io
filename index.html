@@ -107,7 +107,7 @@
                         <p class="is-size-6"><em>*Equal Contribution</em></p>
 
                         <div class="publication-links" style="margin-top: 1rem;">
-                            <a href="https://arxiv.org/abs/2412.18605" target="_blank"
+                            <a href="https://openreview.net/pdf?id=n3armuTFit" target="_blank"
                                 class="button is-normal is-rounded"
                                 style="background-color: #ff4d4d; color: white; margin: 0.25rem;">
                                 <span class="icon"><i class="ai ai-arxiv"></i></span>
@@ -182,75 +182,26 @@
         <h2 class="title is-4" style="text-align: center;">Visualizations on Images in the wild.</h2>
         <div class="container is-max-desktop">
             <div style="text-align: center; border: green solid 0px;">
-                <img alt="" id="wild1" width="70%" src="static/images/wild1.png"
+                <img alt="" id="wild1" width="70%" src="static/images/demos/no0.jpg"
                     style="display: inline-block; vertical-align: middle;" />
-                <img alt="" id="wild2" width="70%" src="static/images/wild2.png" style="margin: 0 auto" />
+                <img alt="" id="wild2" width="70%" src="static/images/demos/one0.jpg" style="margin: 0 auto" />
+                <img alt="" id="wild2" width="70%" src="static/images/demos/one1.jpg" style="margin: 0 auto" />
+                <img alt="" id="wild2" width="70%" src="static/images/demos/two0.jpg" style="margin: 0 auto" />
+                <img alt="" id="wild2" width="70%" src="static/images/demos/four0.jpg" style="margin: 0 auto" />
             </div>
         </div>
     </section>
 
-    <section class="section" style="margin-top: 0; padding-top: 50px;">
-        <h2 class="title is-4" style="text-align: center;">Visualization on Symmetry Objects.</h2>
+    <section class="hero is-small" style="margin-top: 30px; padding-top: 0px;">
+        <h2 class="title is-4" style="text-align: center;">Visualization of relative pose prediction.</h2>
         <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column is-full-width">
-                    <br>
-                    <div class="video-grid">
-                        <video poster="" id="sakura" autoplay muted loop playsinline>
-                            <source src="./videos/sakura_clip.mov" type="video/mp4">
-                        </video>
-                        <video poster="" id="jojo" autoplay muted loop playsinline>
-                            <source src="./videos/jojo_clip.mov" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="video-grid">
-                        <video poster="" id="ade" autoplay muted loop playsinline>
-                            <source src="./videos/model_car.mov" type="video/mp4">
-                        </video>
-                        <video poster="" id="chara" autoplay muted loop playsinline>
-                            <source src="./videos/model_chara.mov" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
+            <div style="text-align: center; border: green solid 0px;">
+                <img alt="" id="wild1" width="70%" src="static/images/demos/ref0.jpg"
+                    style="display: inline-block; vertical-align: middle;" />
+                <img alt="" id="wild2" width="70%" src="static/images/demos/ref1.jpg" style="margin: 0 auto" />
             </div>
         </div>
-        <div class="video-grid-3">
-            <video poster="" id="pig" autoplay muted loop playsinline>
-                <source src="./videos/pig_overlay_clip.mp4" type="video/mp4">
-            </video>
-            <video poster="" id="plane" autoplay muted loop playsinline>
-                <source src="./videos/plane1_clip.mov" type="video/mp4">
-            </video>
-            <video poster="" id="car" autoplay muted loop playsinline>
-                <source src="./videos/car_clip.mov" type="video/mp4">
-            </video>
-        </div>
     </section>
-
-
-    <section class="hero is-small" style="margin-top: 50px; padding-top: 0px;">
-        <h2 class="title is-4" style="text-align: center;">Qualitative Comparison</h2>
-        <div class="hero-body">
-            <div class="container">
-                <div id="results-carousel" class="carousel results-carousel">
-                    <div style="text-align: center; border: green solid 0px;">
-                        <img src="./static/images/objectron.png" width="80%">
-                    </div>
-                    <div style="text-align: center; border: green solid 0px;">
-                        <img src="./static/images/ark.png" width="80%">
-                    </div>
-                    <div style="text-align: center; border: green solid 0px;">
-                        <img src="./static/images/sunrgbd.png" width="80%">
-                    </div>
-                    <div style="text-align: center; border: green solid 0px;">
-                        <img src="./static/images/kitti.png" width="80%">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
 
     <!-- <section class="section" style="background-color:#efeff081"> -->
     <section class="section">
@@ -356,9 +307,11 @@
     <section class="section pt-0" id="BibTeX">
         <div class="container is-max-desktop content">
             <h2 class="title is-4">Citation</h2>
-            <pre class="selectable"><code>
-
-            </code></pre>
+            <pre class="selectable"><code>@inproceedings{wangorient,
+title={Orient Anything V2: Unifying Orientation and Rotation Understanding},
+author={Wang, Zehan and Zhang, Ziang and Xu, Jiayang and Wang, Jialei and Pang, Tianyu and Du, Chao and Zhao, Hengshuang and Zhao, Zhou},
+booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems}
+}</code></pre>
         </div>
     </section>
 
@@ -366,7 +319,8 @@
     <footer class="footer">
         <div class="container">
             <div class="content has-text-centered">
-                <a class="icon-link" href="">
+                <a class="icon-link" href="https://openreview.net/pdf?id=n3armuTFit" class="external-link"
+                    disabled>
                     <i class="fas fa-file-pdf"></i>
                 </a>
                 <a class="icon-link" href="https://github.com/SpatialVision/Orient-Anything-V2" class="external-link"
